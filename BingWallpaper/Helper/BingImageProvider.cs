@@ -14,7 +14,7 @@ namespace BingWallpaper
             string baseUri = "https://www.bing.com";
             using (var client = new HttpClient())
             {
-                using (var jsonStream = await client.GetStreamAsync("http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US"))
+                using (var jsonStream = await client.GetStreamAsync("http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=de-DE"))
                 {
                     var ser = new DataContractJsonSerializer(typeof(Result));
                     var res = (Result)ser.ReadObject(jsonStream);
